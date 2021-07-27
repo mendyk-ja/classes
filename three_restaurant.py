@@ -13,5 +13,10 @@ class Restaurant:
 
 
 first_restaurant = Restaurant('boski schabowy', 'polish')
+first_restaurant.describe_restaurant()
+
 second_restaurant = Restaurant('ustafar', 'malaysian')
+second_restaurant.describe_restaurant()
+
 third_restaurant = Restaurant('babrakar', 'vietnamese')
+third_restaurant.describe_restaurant()
