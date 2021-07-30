@@ -32,11 +32,23 @@ class Car:
         self.odometer_reading += miles
 
 
-my_used_car = Car('subaru', 'outback', 2015)
-print(my_used_car.get_descriptive_name())
+class ElectricCar(Car):
+    """Represent characteristics of electric car."""
 
-my_used_car.update_odometer(23_500)
-my_used_car.read_odometer()
+    def __init__(self, make, model, year):
+        """
+        Initialization attributes of main class.
+        Then representation of electric car's characteristic attributes.
+        """
+        super().__init__(make, model, year)
+        self.battery_size = 75
 
-my_used_car.increment_odometer(100)
-my_used_car.read_odometer()
+    def describe_battery(self):
+        """Displaying information about battery size"""
+        print(f"This car's battery has size of {self.battery_size} kWh")
+
+
+my_tesla = ElectricCar('tesla', 'model s', 2019)
+print(my_tesla.get_descriptive_name())
+my_tesla.describe_battery()
+
