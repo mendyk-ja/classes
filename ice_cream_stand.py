@@ -19,7 +19,7 @@ class IceCreamStand(Restaurant):
         Initialization attributes of main class.
         Then representation of Ice Cream Stand's characteristic attributes.
         """
-        super().__init__(restaurant_name,cuisine_type)
+        super().__init__(restaurant_name, cuisine_type)
         self.flavours = ['awful', 'nice', 'nothing special']
 
     def describe_flavours(self):
