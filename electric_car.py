@@ -41,7 +41,7 @@ class Battery:
 
     def describe_battery(self):
         """Displaying information about battery size"""
-        print(f"This car's battery has size of {self.battery_size} kWh")
+        print(f"This car's battery has size of {self.battery_size} kWh.")
 
     def get_range(self):
         """
@@ -52,7 +52,14 @@ class Battery:
         elif self.battery_size == 100:
             range = 315
 
-        print(f"Range of this car is more or less {range} km with full charged battery")
+        print(f"Range of this car is more or less {range} km with full charged battery.")
+
+    def upgrade_battery(self):
+
+        if self.battery_size < 100:
+            self.battery_size = 100
+
+        print("Your battery has been upgraded to 100 kWh.")
 
 
 class ElectricCar(Car):
@@ -70,5 +77,8 @@ class ElectricCar(Car):
 my_tesla = ElectricCar('tesla', 'model s', 2019)
 print(my_tesla.get_descriptive_name())
 my_tesla.battery.describe_battery()
+my_tesla.battery.upgrade_battery()
+my_tesla.battery.describe_battery()
+
 my_tesla.battery.get_range()
 
