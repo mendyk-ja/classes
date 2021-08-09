@@ -20,19 +20,26 @@ class User:
         print(f"Hello, {self.first_name}! Glad to see you again!")
 
 
+class Privileges:
+    """Representation of admin privileges"""
+
+    def __init__(self, privileges=None):
+        """Initialization of Privileges's attributes"""
+        self.privileges = privileges
+
+    def show_privileges(self):
+        """ Method for displaying privileges"""
+        print(f"List of possible actions: {self.privileges}")
+
+
 class Admin(User):
 
     def __init__(self,  first_name, last_name, age, country, ):
         """Initialization attributes first_name, last_name, age  and country"""
         super().__init__(first_name, last_name, age, country)
-        self.privileges = ['can add post', 'can delete post', 'can ban users']
-
-    def show_privileges(self):
-
-        print(f"List of possible actions: {self.privileges}")
+        self.privileges = Privileges(('can add post', 'can delete post', 'can ban users'))
 
 
 new_admin = Admin('jan', 'kowalski', 90, 'poland')
 new_admin.describe_user()
-new_admin.show_privileges()
-
+new_admin.privileges.show_privileges()
