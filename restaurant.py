@@ -1,3 +1,6 @@
+"""Class, which will be used to represent a restaurant"""
+
+
 class Restaurant:
     """Just simple representation of restaurant"""
 
@@ -10,10 +13,4 @@ class Restaurant:
 
     def open_restaurant(self):
         print(f"{self.restaurant_name.title()} is open 14-22")
-
-
-new_restaurant = Restaurant('khinkalnia', 'georgian')
-
-print(f"This restaurant name is {new_restaurant.restaurant_name.title()}.")
-print(f"This restaurant served {new_restaurant.cuisine_type} cuisine.")
 
